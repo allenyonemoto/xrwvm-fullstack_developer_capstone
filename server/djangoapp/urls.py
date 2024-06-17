@@ -7,17 +7,17 @@ from . import views
 app_name = 'djangoapp'
 urlpatterns = [
     # # path for registration
-    path(route='registration/', 
-         view=views.registration, 
+    path(route='registration/',
+         view=views.registration,
          name='registration'),
     # path for login
-    path(route='login', 
-         view=views.login_user, 
+    path(route='login',
+         view=views.login_user,
          name='login'),
 
     # path for dealer reviews view
-    path(route='dealer/<int:dealer_id>', 
-         view=views.get_dealer_details, 
+    path(route='dealer/<int:dealer_id>',
+         view=views.get_dealer_details,
          name='dealer_details'
         ),
     # path for add a review view
@@ -32,19 +32,19 @@ urlpatterns = [
     # path for get cars view
     path(route='get_cars', 
          view=views.get_cars, 
-         name ='getcars'),
+         name='getcars'),
 
     # path for get dealers
-    path(route="get_dealers", 
-         view=views.get_dealerships, 
+    path(route="get_dealers",
+         view=views.get_dealerships,
          name="get_dealers"),
-    path(route="get_dealers/<str:state>", 
-         view=views.get_dealerships, 
+    path(route="get_dealers/<str:state>",
+         view=views.get_dealerships,
          name="get_dealers_by_state"),
 
     # path for reviews from dealer_id
-    path(route="reviews/dealer/<int:dealer_id>", 
-         view=views.get_dealer_reviews, 
+    path(route="reviews/dealer/<int:dealer_id>",
+         view=views.get_dealer_reviews,
          name="dealer_details"),
-] + static(settings.MEDIA_URL, 
+] + static(settings.MEDIA_URL,
            document_root=settings.MEDIA_ROOT)
