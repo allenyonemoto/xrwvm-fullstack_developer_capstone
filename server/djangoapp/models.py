@@ -32,9 +32,7 @@ class CarMake(models.Model):
 # value 2015 and max value 2023
 # - Any other fields you would like to include in car model
 # - __str__ method to print a car make object
-
 class CarModel(models.Model):
-    
     # Many-to-One relationship
     car_make = models.ForeignKey(
         CarMake,
@@ -60,7 +58,6 @@ class CarModel(models.Model):
             MinValueValidator(2015)
         ],
     )
-
     # Other fields as needed
     def __str__(self):
         return self.name
