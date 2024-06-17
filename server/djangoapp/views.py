@@ -20,7 +20,7 @@ from .restapis import get_request, analyze_review_sentiments, post_review
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
-
+# -*- coding: utf-8  -*-
 # Create your views here.
 def get_cars(request):
     count = CarMake.objects.filter().count()
