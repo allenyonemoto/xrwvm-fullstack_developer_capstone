@@ -66,7 +66,7 @@ ROOT_URLCONF = 'djangoproj.urls'
 
 TEMPLATES = [
     {
-        'BACKEND': 
+        'BACKEND':
         'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(
@@ -76,12 +76,12 @@ TEMPLATES = [
             os.path.join(
                 BASE_DIR,
                 'frontend/build'
-            ), 
+            ),
             os.path.join(
                 BASE_DIR,
                 'frontend/build/static'
             ),
-        ], 
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -89,9 +89,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-            ], 
-        }, 
-    }, 
+            ],
+        },
+    },
 ]
 
 WSGI_APPLICATION = 'djangoproj.wsgi.application'
@@ -102,15 +102,15 @@ WSGI_APPLICATION = 'djangoproj.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 
+        'ENGINE':
         'django.db.backends.sqlite3',
-        'NAME': 
+        'NAME':
         BASE_DIR / 'db.sqlite3',
     }
 }
 
 AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 
+    {'NAME':
      'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     }, 
     {'NAME':
@@ -121,7 +121,7 @@ AUTH_PASSWORD_VALIDATORS = [
     }, 
     {'NAME':
      'django.contrib.auth.password_validation.NumericPasswordValidator',
-    }, 
+    },
 ]
 
 
@@ -144,10 +144,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(
-    BASE_DIR, 
+    BASE_DIR,
     'static')
 MEDIA_ROOT = os.path.join(
-    STATIC_ROOT, 
+    STATIC_ROOT,
     'media')
 MEDIA_URL = '/media/'
 
@@ -158,16 +158,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
     os.path.join(
-        BASE_DIR, 
+        BASE_DIR,
         'frontend/static'
-    ), 
+    ),
     os.path.join(
-        BASE_DIR, 
+        BASE_DIR,
         'frontend/build'
-    ), 
+    ),
     os.path.join(
-        BASE_DIR, 
+        BASE_DIR,
         'frontend/build/static'
-    ), 
+    ),
 ]
-
