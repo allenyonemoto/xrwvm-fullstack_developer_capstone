@@ -58,18 +58,14 @@ def login_user(request):
     return JsonResponse(data)
 
 # Create a `logout_request` view to handle sign out request
-
-def logout_request(request):
-    
+def logout_request(request):    
     logout(request)
     data = {"userName": ""}
     return JsonResponse(data)
 
 # Create a `registration` view to handle sign up request
 # @csrf_exempt
-
-def registration(request):
-    
+def registration(request):   
     data = json.loads(request.body)
     username = data['userName']
     password = data['password']
@@ -108,9 +104,7 @@ def registration(request):
 
 # # Update the `get_dealerships` view to render the index page with
 # a list of dealerships
-
-def get_dealerships(request, state="All"):
-    
+def get_dealerships(request, state="All"):   
     if state == "All":
         endpoint = "/fetchDealers"
     else:
@@ -121,9 +115,7 @@ def get_dealerships(request, state="All"):
          "dealers": dealerships})
 
 # Create a `get_dealer_reviews` view to render the reviews of a dealer
-
-def get_dealer_reviews(request, dealer_id):
-    
+def get_dealer_reviews(request, dealer_id):  
     # if dealer id has been provided
     if dealer_id:
         endpoint = "/fetchReviews/dealer/" + str(dealer_id)
@@ -142,9 +134,7 @@ def get_dealer_reviews(request, dealer_id):
              "message": "Bad Request"})
 
 # Create a `get_dealer_details` view to render the dealer details
-
-def get_dealer_details(request, dealer_id):
-    
+def get_dealer_details(request, dealer_id):    
     if dealer_id:
         endpoint = "/fetchDealer/" + str(dealer_id)
         dealership = get_request(endpoint)
@@ -157,9 +147,7 @@ def get_dealer_details(request, dealer_id):
              "message": "Bad Request"})
 
 # Create a `add_review` view to submit a review
-
-def add_review(request):
-    
+def add_review(request):    
     if not request.user.is_anonymous:
         data = json.loads(request.body)
         try:
