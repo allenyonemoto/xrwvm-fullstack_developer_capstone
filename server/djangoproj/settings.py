@@ -14,8 +14,8 @@ import os
 from pathlib import Path
 
 
-# Build paths inside the project like this: 
-#BASE_DIR / 'subdir'.
+# Build paths inside the project like this:
+# BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -30,7 +30,7 @@ SECRET_KEY =\
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost', 
+    'localhost',
     'https://allenyonemot-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai'
 ]
 CSRF_TRUSTED_ORIGINS = [
@@ -38,28 +38,28 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [], 
+    'DEFAULT_AUTHENTICATION_CLASSES': []
 }
 
 # Application definition
 
 INSTALLED_APPS = [
-    'djangoapp.apps.DjangoappConfig', 
-    'django.contrib.admin', 
-    'django.contrib.auth', 
-    'django.contrib.contenttypes', 
-    'django.contrib.sessions', 
-    'django.contrib.messages', 
-    'django.contrib.staticfiles', 
+    'djangoapp.apps.DjangoappConfig',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles'
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware', 
-    'django.contrib.sessions.middleware.SessionMiddleware', 
-    'django.middleware.common.CommonMiddleware', 
-    'django.contrib.auth.middleware.AuthenticationMiddleware', 
-    'django.contrib.messages.middleware.MessageMiddleware', 
-    'django.middleware.clickjacking.XFrameOptionsMiddleware', 
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 ROOT_URLCONF = 'djangoproj.urls'
@@ -70,17 +70,17 @@ TEMPLATES = [
         'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(
-                BASE_DIR, 
+                BASE_DIR,
                 'frontend/static'
-            ), 
+            ),
             os.path.join(
-                BASE_DIR, 
+                BASE_DIR,
                 'frontend/build'
             ), 
             os.path.join(
-                BASE_DIR, 
+                BASE_DIR,
                 'frontend/build/static'
-            ), 
+            ),
         ], 
         'APP_DIRS': True,
         'OPTIONS': {
