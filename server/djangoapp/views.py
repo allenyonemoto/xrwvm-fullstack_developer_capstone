@@ -163,4 +163,3 @@ def add_review(request):
         return JsonResponse(
             {"status": 403,
              "message": "Unauthorized"})
-# -*- coding: utf-8  -*-
