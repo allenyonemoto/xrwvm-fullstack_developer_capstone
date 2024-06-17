@@ -33,6 +33,7 @@ class CarMake(models.Model):
 # - Any other fields you would like to include in car model
 # - __str__ method to print a car make object
 
+
 class CarModel(models.Model):
     # Many-to-One relationship
     car_make = models.ForeignKey(
@@ -60,7 +61,7 @@ class CarModel(models.Model):
         ],
     )
     # Other fields as needed
-    
+
     def __str__(self):
         return self.name
         # Return the name as the string representation
