@@ -28,8 +28,8 @@ urlpatterns = [
          )
         ),
     path('', TemplateView.as_view(
-        template_name=
-        "Home.html")
+             template_name=
+             "Home.html")
         ),
     path('about/',
          TemplateView.as_view(
